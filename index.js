@@ -171,15 +171,15 @@ function processDuplicateFree(/* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS
 
 function lowerCaseStrings(strings) {
   /* code here */
-  strings.forEach(function(array){
+  let arr1 = []
+  strings.forEach(function(element){
+    
+    arr1.push (element.toLowerCase(strings));
 
-    array = strings.length
-
-
-  });
+  })
+  return arr1;
+};
   
-
-}
 
 /**
  * ### Challenge `isItAnApple`
@@ -196,8 +196,17 @@ function lowerCaseStrings(strings) {
  * 
  * [2] Invoking `isItAnApple` with `['a', 'b', 'c' ]` will return `[ false, false, false ]`.
 */
-function isItAnApple(/* code here */) {
+function isItAnApple(strings) {
   /* code here */
+  const appLe = strings.map((trueFalse) => {
+    if (trueFalse === 'apple')
+    return true;
+    
+    else{
+      return false;}
+  });
+
+return appLe;
 }
 
 /**
@@ -216,8 +225,14 @@ function isItAnApple(/* code here */) {
  * 
  * [2] Invoking `removeApple` with `['a', 'b', 'c' ]` will return `[ 'a', 'b', 'c' ]`.
 */
-function removeApple(/* code here */) {
+function removeApple(strings) {
   /* code here */
+  let poof = strings.filter(fruity =>{
+
+    return fruity != 'apple';
+
+  });
+  return poof;
 }
 
 /**
@@ -235,8 +250,19 @@ function removeApple(/* code here */) {
  * 
  * [2] Invoking `stringSmash` with `['a', 'b', 'c' ]` will return `abc`.
 */
-function stringSmash(/* code here */) {
+function stringSmash(strings) {
   /* code here */
+
+
+  let smashing = strings.reduce((fruits, elems) => {
+
+
+    return fruits + elems;
+  });
+
+
+return smashing;
+
 }
 
 // A local community center is holding a fund raising 5k fun run and has invited
@@ -254,8 +280,16 @@ function stringSmash(/* code here */) {
  * @returns an array with all the runners' full names in the following format: "Smith, John".
  * The full names appear in the array in the same order the runners appear in the `runners` array.
 */
-function getFullNames(/* CODE HERE */) {
+function getFullNames(runners) {
   /* CODE HERE */
+
+  let runName = runners.map((run) =>{
+
+    return `${run.last_name}, ${run.first_name}`;
+
+  })
+return runName;
+
 }
 
 /**
@@ -270,8 +304,17 @@ function getFullNames(/* CODE HERE */) {
  * @returns an array with all the runners' first names in ALL CAPS.
  * The first names appear in the array in the same order the runners appear in the `runners` array.
 */
-function firstNamesAllCaps(/* CODE HERE */) {
+function firstNamesAllCaps(runners) {
   /* CODE HERE */
+  let runName = runners.map((run) =>{
+
+    return `${run.first_name.toUpperCase(runners)}`;
+
+  })
+return runName;
+
+
+
 }
 
 /**
@@ -317,11 +360,11 @@ function tallyUpDonations(/* CODE HERE */) {
  * Study the code for counter1 and counter2. Answer the questions below.
  * 
  * 1. What is the difference between counter1 and counter2?
- * 
+ *    counter1 is higher order code
  * 2. Which of the two uses a closure? How can you tell?
- * 
+ *    counter1 is using closure, counter2's variable is sitting outside of the functions
  * 3. In what scenario would the counter1 code be preferable? In what scenario would counter2 be better? 
- *
+ *    counter1 is good if you only need to run that specific code once, and counter2 can be updated whenever. 
 */
 
 // counter1 code
